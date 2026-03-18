@@ -1,13 +1,14 @@
 # Hybrid Dev Workflow
 
-混合 AI 开发工作流，结合 Claude Code（设计）和 Codex（编程）。
+混合 AI 开发工作流，结合 Claude Code（设计）和 Codex MCP（编程）。
 
 ## 概述
 
-通过 Claude Code 和 Codex 的混合开发模式，实现高效、低成本的软件开发。
+通过 Claude Code 和 Codex MCP 的混合开发模式，实现高效、低成本的软件开发。
 
 - **Claude Code**: 负责设计、规划、代码审查
-- **Codex**: 负责代码生成和实现
+- **Codex MCP (@cexll/codex-mcp-server)**: 负责代码生成和实现
+- **版本**: 1.2.5
 
 ## 功能
 
@@ -40,9 +41,9 @@
 
 适用于小任务（最多 3 个文件）。
 
-## Codex 优化
+## Codex MCP 优化
 
-本项目包含针对 Codex MCP 的优化，解决 token 超限问题：
+本项目包含针对 Codex MCP (@cexll/codex-mcp-server v1.2.5) 的优化，解决 token 超限问题：
 
 - **Prompt 模板**: 精简返回格式，减少 token 消耗
 - **参数修复**: 使用 `fullAuto: true` 替代 `sandbox: true`
