@@ -5,6 +5,30 @@ description: "Execution phase of hybrid workflow: agent selection, task executio
 
 # Hybrid Execution
 
+## Required Permissions
+
+To use Codex MCP for task execution, add the following to your user-level `~/.claude/settings.json`:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "mcp__codex-mcp-server__ping",
+      "mcp__codex-mcp-server__ask-codex",
+      "mcp__codex-mcp-server__batch-codex",
+      "mcp__codex-mcp-server__version",
+      "Bash(codex:*)",
+      "Bash(gpt-5:*)",
+      "Bash(o3:*)",
+      "Bash(o4-mini:*)",
+      "Bash(codex-mini-latest:*)"
+    ]
+  }
+}
+```
+
+Without these permissions, Codex MCP calls will fail with "sandbox policy" error.
+
 Execution phase of the hybrid development workflow. Handles agent selection, task execution with TDD, and multi-stage review.
 
 **When triggered:** After user confirms from planning phase

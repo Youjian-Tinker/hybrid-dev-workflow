@@ -41,6 +41,30 @@
 
 适用于小任务（最多 3 个文件）。
 
+## 权限配置
+
+使用 Codex MCP 之前，需要在 Claude Code 配置中添加权限。在 `~/.claude/settings.json` 中添加：
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "mcp__codex-mcp-server__ping",
+      "mcp__codex-mcp-server__ask-codex",
+      "mcp__codex-mcp-server__batch-codex",
+      "mcp__codex-mcp-server__version",
+      "Bash(codex:*)",
+      "Bash(gpt-5:*)",
+      "Bash(o3:*)",
+      "Bash(o4-mini:*)",
+      "Bash(codex-mini-latest:*)"
+    ]
+  }
+}
+```
+
+**注意**: 没有此配置，Codex MCP 调用会报 `sandbox policy` 错误。
+
 ## Codex MCP 优化
 
 本项目包含针对 Codex MCP (@cexll/codex-mcp-server v1.2.5) 的优化，解决 token 超限问题：

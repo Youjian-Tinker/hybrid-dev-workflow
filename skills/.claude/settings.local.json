@@ -7,13 +7,18 @@
       "Bash(codex exec:*)",
       "Read(//d/AI-Workspace/**)",
       "Bash(mkdir -p codex-test-workspace)",
-      "mcp__codex-mcp-server__ping",
-      "mcp__codex-mcp-server__ask-codex",
       "Bash(cd:*)",
       "Bash(tasklist:*)",
       "Bash(taskkill:*)",
       "Bash(handle:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(git branch:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)"
     ]
   }
 }
