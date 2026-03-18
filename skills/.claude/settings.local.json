@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where codex-mcp-server:*)",
+      "Bash(npm list:*)",
+      "Bash(npm root:*)",
+      "Bash(codex exec:*)",
+      "Read(//d/AI-Workspace/**)",
+      "Bash(mkdir -p codex-test-workspace)",
+      "mcp__codex-mcp-server__ping",
+      "mcp__codex-mcp-server__ask-codex",
+      "Bash(cd:*)",
+      "Bash(tasklist:*)",
+      "Bash(taskkill:*)",
+      "Bash(handle:*)",
+      "Bash(cp:*)"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "skill_name": "hybrid-codex-optimization",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "使用 hybrid-execution 模式，为学校模块创建 3 个文件：School.java 实体类、SchoolMapper.java、SchoolService.java 接口。使用 Codex 执行，验证返回格式是否符合预期（SUCCESS/FAILED + 文件路径 + 功能描述）",
+      "expected_output": "Codex 返回简洁格式，包含 SUCCESS/FAILED 标记和文件路径",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "使用 hybrid-quick-dev 模式，创建 1 个简单的工具类 ValidateUtils.java，包含 email 验证方法。使用 Codex 执行",
+      "expected_output": "快速完成，返回简洁的成功/失败状态",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "模拟一个会失败的 Codex 任务：创建一个依赖不存在的类的文件，观察错误处理是否正确记录失败原因",
+      "expected_output": "返回 FAILED 格式，包含错误原因",
+      "files": []
+    }
+  ]
+}
