@@ -65,6 +65,22 @@
 
 **注意**: 没有此配置，Codex MCP 调用会报 `sandbox policy` 错误。
 
+### Codex CLI 配置
+
+如果仍然报 sandbox 错误，需要修改 Codex CLI 配置 `~/.codex/config.toml`：
+
+```toml
+[windows]
+sandbox = "disabled"
+
+[projects.'你的项目路径']
+trust_level = "trusted"
+```
+
+**配置说明：**
+- `sandbox = "disabled"` - 禁用 Windows 沙盒限制
+- `trust_level = "trusted"` - 将项目设置为信任级别
+
 ## Codex MCP 优化
 
 本项目包含针对 Codex MCP (@cexll/codex-mcp-server v1.2.5) 的优化，解决 token 超限问题：
